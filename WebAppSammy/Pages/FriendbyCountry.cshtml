@@ -1,7 +1,7 @@
 @page
-@model WebAppSammy.Pages.TestPage1
+@model WebAppSammy.Pages.FriendbyCountry
 @{
-    ViewData["Title"] = "";
+    ViewData["Title"] = "hej";
 }
 
 <h1>@ViewData["Title"]</h1>
@@ -16,13 +16,13 @@
         <p>Click in on a country below to see what cities my friends are living in.</p>
     
         <div class="row row-cols-1 row-cols-lg-4 align-items-stretch g-4 py-5">
-          <a href="#friends-in-a-country" class="text-decoration-none">
+          <a asp-page="/CountryData" asp-route-Country="Sweden" class="text-decoration-none">" class="text-decoration-none">
             <div class="col">
               <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('./icons/sweden.png');">
                 <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                   <h3 class="pt-1 mt-1 mb-4 display-6 lh-1 fw-bold">Sweden</h3>
-                    <p class="fs-5">300 Friends in 5 cities</p>
+                    <p class="fs-5">@Model.FriendsInSweden Friends in 5 cities</p>
                 </div>
               </div>
             </div>
-          </a>
+          </a> 
